@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive Feedback UI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="{{ color }}">
+    <div class="container">
+        <h2>Tell us about your experience</h2>
+
+        <form method="POST">
+            <textarea name="feedback" placeholder="Enter your feedback here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if message %}
+        <div class="response">
+            <p>{{ message }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
